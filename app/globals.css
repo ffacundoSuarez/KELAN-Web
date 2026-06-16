@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/*
+ * Tema KELAN — modo oscuro nativo.
+ * Colores del manual de marca:
+ *   lima   #b3f70d  → acentos, CTAs, hovers (texto NEGRO encima, nunca blanco)
+ *   gris   #f3f3f3  → texto principal sobre fondo oscuro
+ *   negro  #0b0c0b  → fondo base
+ */
+@theme {
+  --color-kelan-lima: #b3f70d;
+  --color-kelan-lima-dark: #93cc0b;
+  --color-kelan-gris: #f3f3f3;
+  --color-kelan-negro: #0b0c0b;
+  /* Superficies sutiles sobre el negro base */
+  --color-kelan-superficie: #141614;
+  --color-kelan-borde: #26282600;
+
+  --color-background: var(--color-kelan-negro);
+  --color-foreground: var(--color-kelan-gris);
+
+  --font-titulos: var(--ff-titulos), system-ui, sans-serif;
+  --font-texto: var(--ff-texto), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-kelan-negro);
+    color: var(--color-kelan-gris);
+    font-family: var(--font-texto);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-titulos);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  /* Foco visible y consistente para accesibilidad. */
+  :focus-visible {
+    outline: 2px solid var(--color-kelan-lima);
+    outline-offset: 2px;
+  }
+}

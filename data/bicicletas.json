@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "kelan-negra",
+    "nombre": "KELAN Negra",
+    "color": "negra",
+    "precio": 1450000,
+    "moneda": "ARS",
+    "destacado": true,
+    "descripcionCorta": "El scooter eléctrico KELAN en negro: elegante, urbano y listo para la ciudad.",
+    "descripcionLarga": "El scooter eléctrico KELAN en color negro combina diseño y practicidad para la movilidad urbana diaria. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Una opción sobria para moverte sin nafta ni ruido. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "specs": {
+      "motor": "Motor brushless 800W",
+      "bateria": "Litio 60V 20Ah extraíble",
+      "autonomiaKm": 65,
+      "velocidadMaxKmh": 45,
+      "tiempoCargaHoras": 6,
+      "freno": "Disco delantero y trasero",
+      "rodado": "Llanta 14\"",
+      "pesoKg": 68,
+      "cargaMaxKg": 150
+    },
+    "imagenes": [
+      { "src": "/images/bicis/kelan-negra-02.jpg", "alt": "Scooter eléctrico KELAN color negro, vista frontal tres cuartos" }
+    ],
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+  },
+  {
+    "slug": "kelan-azul",
+    "nombre": "KELAN Azul",
+    "color": "azul",
+    "precio": 1450000,
+    "moneda": "ARS",
+    "destacado": false,
+    "descripcionCorta": "El scooter eléctrico KELAN en azul: un toque de color para tu día a día.",
+    "descripcionLarga": "El scooter eléctrico KELAN en color azul aporta personalidad sin resignar prestaciones. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Movilidad urbana limpia y económica. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "specs": {
+      "motor": "Motor brushless 800W",
+      "bateria": "Litio 60V 20Ah extraíble",
+      "autonomiaKm": 65,
+      "velocidadMaxKmh": 45,
+      "tiempoCargaHoras": 6,
+      "freno": "Disco delantero y trasero",
+      "rodado": "Llanta 14\"",
+      "pesoKg": 68,
+      "cargaMaxKg": 150
+    },
+    "imagenes": [
+      { "src": "/images/bicis/kelan-azul-01.jpg", "alt": "Scooter eléctrico KELAN color azul, vista lateral" }
+    ],
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+  },
+  {
+    "slug": "kelan-blanca",
+    "nombre": "KELAN Blanca",
+    "color": "blanca",
+    "precio": 1450000,
+    "moneda": "ARS",
+    "destacado": false,
+    "descripcionCorta": "El scooter eléctrico KELAN en blanco: limpio, moderno y minimalista.",
+    "descripcionLarga": "El scooter eléctrico KELAN en color blanco transmite un estilo limpio y moderno. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Ideal para quienes buscan diseño y eficiencia. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "specs": {
+      "motor": "Motor brushless 800W",
+      "bateria": "Litio 60V 20Ah extraíble",
+      "autonomiaKm": 65,
+      "velocidadMaxKmh": 45,
+      "tiempoCargaHoras": 6,
+      "freno": "Disco delantero y trasero",
+      "rodado": "Llanta 14\"",
+      "pesoKg": 68,
+      "cargaMaxKg": 150
+    },
+    "imagenes": [
+      { "src": "/images/bicis/kelan-blanca-01.jpg", "alt": "Scooter eléctrico KELAN color blanco, vista frontal tres cuartos" }
+    ],
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+  },
+  {
+    "slug": "kelan-roja",
+    "nombre": "KELAN Roja",
+    "color": "roja",
+    "precio": 1450000,
+    "moneda": "ARS",
+    "destacado": false,
+    "descripcionCorta": "El scooter eléctrico KELAN en rojo: energía y carácter sobre ruedas.",
+    "descripcionLarga": "El scooter eléctrico KELAN en color rojo es para quienes quieren destacarse. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Movilidad urbana con actitud. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "specs": {
+      "motor": "Motor brushless 800W",
+      "bateria": "Litio 60V 20Ah extraíble",
+      "autonomiaKm": 65,
+      "velocidadMaxKmh": 45,
+      "tiempoCargaHoras": 6,
+      "freno": "Disco delantero y trasero",
+      "rodado": "Llanta 14\"",
+      "pesoKg": 68,
+      "cargaMaxKg": 150
+    },
+    "imagenes": [
+      { "src": "/images/bicis/kelan-roja-01.jpg", "alt": "Scooter eléctrico KELAN color rojo, vista lateral" }
+    ],
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+  }
+]
