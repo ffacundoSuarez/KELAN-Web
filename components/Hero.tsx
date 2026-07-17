@@ -5,16 +5,16 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-white/10">
       {/* Imagen de fondo a sangrado. priority → es el LCP de la landing.
-          La imagen ya viene oscurecida: sin opacity extra para que el scooter se vea. */}
+          La imagen ya viene oscurecida: sin opacity extra para que la bici se vea. */}
       <Image
         src="/images/bicis/BicicletaFondo.png"
-        alt="Scooter eléctrico KELAN en la ciudad"
+        alt="Bicicleta eléctrica KELAN en la ciudad"
         fill
         priority
         sizes="100vw"
         className="object-cover object-center"
       />
-      {/* Scrim horizontal: oscuro a la izquierda (texto) → se abre a la derecha (scooter). */}
+      {/* Scrim horizontal: oscuro a la izquierda (texto) → se abre a la derecha (bici). */}
       <div className="absolute inset-0 bg-gradient-to-r from-kelan-negro via-kelan-negro/85 to-kelan-negro/20 sm:to-transparent" />
       {/* Refuerzo inferior para legibilidad del texto en mobile. */}
       <div className="absolute inset-0 bg-gradient-to-t from-kelan-negro/70 to-transparent sm:hidden" />
@@ -27,7 +27,7 @@ export default function Hero() {
           Energía para moverte por la ciudad
         </h1>
         <p className="mt-6 max-w-xl font-texto text-lg text-kelan-gris/70">
-          Scooters y ciclomotores eléctricos KELAN. Sin nafta, sin ruido, sin excusas.
+          Bicicletas eléctricas urbanas KELAN. Sin nafta, sin ruido, sin excusas.
           Conocé los modelos y elegí el tuyo.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">

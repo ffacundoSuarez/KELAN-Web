@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.nombre} · Scooters y ciclomotores eléctricos`,
+    default: `${siteConfig.nombre} · Bicicletas eléctricas urbanas`,
     template: `%s · ${siteConfig.nombre}`,
   },
   description: siteConfig.descripcion,
@@ -36,6 +36,14 @@ const organizationLd = {
   name: siteConfig.nombre,
   url: siteConfig.url,
   description: siteConfig.descripcion,
+  telephone: siteConfig.telefono,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.direccion.calle,
+    addressLocality: siteConfig.direccion.addressLocality,
+    addressRegion: siteConfig.direccion.addressRegion,
+    addressCountry: siteConfig.direccion.addressCountry,
+  },
   sameAs: [siteConfig.instagram],
 };
 
@@ -45,6 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-AR"
+      suppressHydrationWarning
       className={`${fontTitulos.variable} ${fontTexto.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-kelan-negro text-kelan-gris">

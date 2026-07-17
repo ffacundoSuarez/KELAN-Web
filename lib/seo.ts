@@ -6,23 +6,34 @@
 export const siteConfig = {
   nombre: "KELAN E-Bikes",
   descripcion:
-    "Scooters y ciclomotores eléctricos en Argentina. Movilidad urbana sustentable: " +
-    "conocé los modelos KELAN, sus specs y comprá por Mercado Libre.",
+    "Bicicletas eléctricas urbanas en Argentina. Showroom en Palermo, Buenos Aires: " +
+    "conocé los modelos KELAN Go, City y Max, sus specs y comprá por Mercado Libre.",
   // URL base para metadata, sitemap y OG absolutas. Cambiar al dominio real.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "es_AR",
-  // Cuenta general de Mercado Libre (fallback si un modelo no trae su propio link).
-  mercadoLibreUrl: "https://www.mercadolibre.com.ar/",
-  // Redes / contacto (placeholder hasta confirmar con la clienta).
-  whatsapp: "https://wa.me/5490000000000",
-  instagram: "https://www.instagram.com/",
-  // Link a Data Fiscal AFIP (placeholder).
-  dataFiscalUrl: "https://www.afip.gob.ar/",
+  // Tienda de Mercado Libre (fallback si un modelo/color no trae su propio link).
+  mercadoLibreUrl: "https://www.mercadolibre.com.ar/pagina/chuwi",
+  // Redes / contacto.
+  whatsapp: "https://wa.me/5491140961044",
+  instagram: "https://www.instagram.com/kelan_ebikes/",
+  // Local físico (showroom). NAP consistente para SEO local.
+  telefono: "+541140961044",
+  direccion: {
+    calle: "Arévalo 1440",
+    barrio: "Palermo",
+    ciudad: "Ciudad de Buenos Aires",
+    // Para JSON-LD PostalAddress.
+    addressLocality: "Palermo, Ciudad de Buenos Aires",
+    addressRegion: "CABA",
+    addressCountry: "AR",
+  },
   keywords: [
-    "scooter eléctrico",
-    "moto eléctrica",
-    "ciclomotor eléctrico",
-    "scooter eléctrico Argentina",
+    "bicicleta eléctrica",
+    "bici eléctrica",
+    "e-bike",
+    "bicicleta eléctrica Palermo",
+    "bicicleta eléctrica Buenos Aires",
+    "showroom bicicletas eléctricas",
     "movilidad eléctrica urbana",
     "KELAN",
   ],

@@ -1,102 +1,105 @@
 [
   {
-    "slug": "kelan-negra",
-    "nombre": "KELAN Negra",
-    "color": "negra",
-    "precio": 1450000,
-    "moneda": "ARS",
+    "slug": "kelan-go",
+    "nombre": "KELAN Go",
     "destacado": true,
-    "descripcionCorta": "El scooter eléctrico KELAN en negro: elegante, urbano y listo para la ciudad.",
-    "descripcionLarga": "El scooter eléctrico KELAN en color negro combina diseño y practicidad para la movilidad urbana diaria. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Una opción sobria para moverte sin nafta ni ruido. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "descripcionCorta": "Bici eléctrica urbana ágil y práctica: motor 350W, batería de litio 48V y hasta 35 km/h.",
+    "descripcionLarga": "La KELAN Go es una bicicleta eléctrica urbana pensada para el día a día en la ciudad. Trae asiento corrido con respaldo, canasto delantero, espejos y batería de litio recargable de 48V 12Ah. Con su motor de 350W alcanza hasta 35 km/h, sin nafta ni ruido. Rodado 14 y soporta hasta 100 kg. Disponible en cuatro colores.",
     "specs": {
-      "motor": "Motor brushless 800W",
-      "bateria": "Litio 60V 20Ah extraíble",
-      "autonomiaKm": 65,
-      "velocidadMaxKmh": 45,
-      "tiempoCargaHoras": 6,
-      "freno": "Disco delantero y trasero",
-      "rodado": "Llanta 14\"",
-      "pesoKg": 68,
-      "cargaMaxKg": 150
+      "motor": "Motor eléctrico 350W",
+      "bateria": "Litio 48V 12Ah recargable",
+      "velocidadMaxKmh": 35,
+      "rodado": "14\"",
+      "pesoKg": 35,
+      "cargaMaxKg": 100
     },
-    "imagenes": [
-      { "src": "/images/bicis/kelan-negra-02.jpg", "alt": "Scooter eléctrico KELAN color negro, vista frontal tres cuartos" }
+    "variantes": [
+      {
+        "color": "azul",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-kelan-go-con-bateria-recargable-48v-12ah/up/MLAU4069834204",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-azul-01.jpg", "alt": "Bicicleta eléctrica KELAN Go color azul, vista lateral" }
+        ]
+      },
+      {
+        "color": "blanca",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-kelan-go-con-bateria-recargable-48v-12ah/up/MLAU4055281681",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-blanca-01.jpg", "alt": "Bicicleta eléctrica KELAN Go color blanco, vista frontal tres cuartos" }
+        ]
+      },
+      {
+        "color": "negra",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-kelan-go-con-bateria-recargable-48v-12ah/up/MLAU4055282867",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-negra-02.jpg", "alt": "Bicicleta eléctrica KELAN Go color negro, vista frontal tres cuartos" }
+        ]
+      },
+      {
+        "color": "roja",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-kelan-go-con-bateria-recargable-48v-12ah/up/MLAU4069834198",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-roja-01.jpg", "alt": "Bicicleta eléctrica KELAN Go color rojo, vista lateral" }
+        ]
+      }
     ],
-    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/pagina/chuwi"
   },
   {
-    "slug": "kelan-azul",
-    "nombre": "KELAN Azul",
-    "color": "azul",
-    "precio": 1450000,
-    "moneda": "ARS",
+    "slug": "kelan-city",
+    "nombre": "KELAN City",
     "destacado": false,
-    "descripcionCorta": "El scooter eléctrico KELAN en azul: un toque de color para tu día a día.",
-    "descripcionLarga": "El scooter eléctrico KELAN en color azul aporta personalidad sin resignar prestaciones. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Movilidad urbana limpia y económica. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "descripcionCorta": "Bici eléctrica urbana con más potencia y autonomía: motor 500W y batería de litio 48V 20Ah.",
+    "descripcionLarga": "La KELAN City es una bicicleta eléctrica urbana con motor de 500W y batería de litio de 48V 20Ah para más autonomía en tus recorridos diarios. Estilo ciclomotor con asiento corrido con respaldo, espejos y plataforma. Alcanza hasta 35 km/h, rodado 14 y soporta hasta 100 kg. Disponible en blanca y roja.",
     "specs": {
-      "motor": "Motor brushless 800W",
-      "bateria": "Litio 60V 20Ah extraíble",
-      "autonomiaKm": 65,
-      "velocidadMaxKmh": 45,
-      "tiempoCargaHoras": 6,
-      "freno": "Disco delantero y trasero",
-      "rodado": "Llanta 14\"",
-      "pesoKg": 68,
-      "cargaMaxKg": 150
+      "motor": "Motor eléctrico 500W",
+      "bateria": "Litio 48V 20Ah recargable",
+      "velocidadMaxKmh": 35,
+      "rodado": "14\"",
+      "pesoKg": 41,
+      "cargaMaxKg": 100
     },
-    "imagenes": [
-      { "src": "/images/bicis/kelan-azul-01.jpg", "alt": "Scooter eléctrico KELAN color azul, vista lateral" }
+    "variantes": [
+      {
+        "color": "blanca",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-500w-kelan-city-bateria-litio-urbana/up/MLAU4055464841",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-city-blanca-01.webp", "alt": "Bicicleta eléctrica KELAN City color blanco, vista lateral" }
+        ]
+      },
+      {
+        "color": "roja",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-500w-kelan-city-bateria-litio-urbana/up/MLAU4070017282",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-city-blanca-01.webp", "alt": "Bicicleta eléctrica KELAN City, vista lateral" }
+        ]
+      }
     ],
-    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/pagina/chuwi"
   },
   {
-    "slug": "kelan-blanca",
-    "nombre": "KELAN Blanca",
-    "color": "blanca",
-    "precio": 1450000,
-    "moneda": "ARS",
+    "slug": "kelan-max",
+    "nombre": "KELAN Max",
     "destacado": false,
-    "descripcionCorta": "El scooter eléctrico KELAN en blanco: limpio, moderno y minimalista.",
-    "descripcionLarga": "El scooter eléctrico KELAN en color blanco transmite un estilo limpio y moderno. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Ideal para quienes buscan diseño y eficiencia. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
+    "descripcionCorta": "La más equipada: motor 500W, batería 48V 20Ah y freno de disco delantero.",
+    "descripcionLarga": "La KELAN Max es la bicicleta eléctrica más equipada de la línea: motor de 500W, batería de litio de 48V 20Ah y freno de disco delantero para mayor seguridad. Estilo ciclomotor urbano con asiento corrido con respaldo, canasto delantero y espejos. Alcanza hasta 35 km/h y rodado 14.",
     "specs": {
-      "motor": "Motor brushless 800W",
-      "bateria": "Litio 60V 20Ah extraíble",
-      "autonomiaKm": 65,
-      "velocidadMaxKmh": 45,
-      "tiempoCargaHoras": 6,
-      "freno": "Disco delantero y trasero",
-      "rodado": "Llanta 14\"",
-      "pesoKg": 68,
-      "cargaMaxKg": 150
+      "motor": "Motor eléctrico 500W",
+      "bateria": "Litio 48V 20Ah recargable",
+      "velocidadMaxKmh": 35,
+      "rodado": "14\"",
+      "pesoKg": 50,
+      "freno": "Disco delantero"
     },
-    "imagenes": [
-      { "src": "/images/bicis/kelan-blanca-01.jpg", "alt": "Scooter eléctrico KELAN color blanco, vista frontal tres cuartos" }
+    "variantes": [
+      {
+        "color": "negra",
+        "mercadoLibreUrl": "https://www.mercadolibre.com.ar/bicicleta-electrica-500w-kelan-max-bateria-litio-48v20ah/up/MLAU4055557349",
+        "imagenes": [
+          { "src": "/images/bicis/kelan-max-negra-01.webp", "alt": "Bicicleta eléctrica KELAN Max color negro, vista frontal tres cuartos" }
+        ]
+      }
     ],
-    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
-  },
-  {
-    "slug": "kelan-roja",
-    "nombre": "KELAN Roja",
-    "color": "roja",
-    "precio": 1450000,
-    "moneda": "ARS",
-    "destacado": false,
-    "descripcionCorta": "El scooter eléctrico KELAN en rojo: energía y carácter sobre ruedas.",
-    "descripcionLarga": "El scooter eléctrico KELAN en color rojo es para quienes quieren destacarse. Motor silencioso, batería extraíble, asiento corrido con respaldo, canasto delantero y frenos de disco. Movilidad urbana con actitud. (Specs y precio provisorios — a confirmar con el contenido definitivo.)",
-    "specs": {
-      "motor": "Motor brushless 800W",
-      "bateria": "Litio 60V 20Ah extraíble",
-      "autonomiaKm": 65,
-      "velocidadMaxKmh": 45,
-      "tiempoCargaHoras": 6,
-      "freno": "Disco delantero y trasero",
-      "rodado": "Llanta 14\"",
-      "pesoKg": 68,
-      "cargaMaxKg": 150
-    },
-    "imagenes": [
-      { "src": "/images/bicis/kelan-roja-01.jpg", "alt": "Scooter eléctrico KELAN color rojo, vista lateral" }
-    ],
-    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/"
+    "mercadoLibreUrl": "https://www.mercadolibre.com.ar/pagina/chuwi"
   }
 ]

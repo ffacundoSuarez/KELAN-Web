@@ -21,8 +21,12 @@ export default function AboutSection() {
       </h2>
       <p className="mt-4 max-w-2xl font-texto text-lg text-kelan-gris/70">
         KELAN nace para acercar la movilidad eléctrica a la vida urbana argentina.
-        Diseñamos scooters y ciclomotores que combinan diseño, autonomía y un costo
+        Diseñamos bicicletas eléctricas que combinan diseño, autonomía y un costo
         de uso imbatible, para que moverte sea simple, limpio y económico.
+      </p>
+      <p className="mt-4 max-w-2xl font-texto text-lg text-kelan-gris/70">
+        Te esperamos en nuestro <span className="text-kelan-gris">showroom de Palermo</span>{" "}
+        (Arévalo 1440) para ver y probar las bicis en persona.
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">

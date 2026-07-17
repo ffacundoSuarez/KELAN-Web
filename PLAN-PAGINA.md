@@ -7,19 +7,19 @@
 ## Qué es el proyecto
 
 Web **vitrina** (catálogo digital, sin carrito ni pagos internos) para **KELAN**, marca argentina de
-**scooters / ciclomotores eléctricos**. Muestra los modelos y redirige a la cuenta de **Mercado Libre**
-de la clienta (Pili) para cerrar la venta. Seña ya cobrada. Material gráfico: manual de marca en PDF +
-fotos (a futuro).
+**bicicletas eléctricas urbanas**. Muestra los modelos y redirige a la tienda de **Mercado Libre**
+(tienda "Chuwi") de la clienta (Pili) para cerrar la venta. Seña ya cobrada. Material gráfico: manual
+de marca en PDF + fotos reales.
 
-> **Corrección importante (2026-06-16):** la versión original de este documento describía bicicletas de
-> pedaleo con categorías "Urbanas / MTB / Plegables". El manual de marca muestra claramente
-> **scooters/ciclomotores eléctricos** (asiento corrido, canasto, plataforma, espejos). El proyecto se
-> reorientó a ese producto. El SEO va keyed a *moto eléctrica / scooter eléctrico / ciclomotor
-> eléctrico*, **no** a "bicicleta eléctrica".
+> **Terminología (REVERSIÓN 2026-07-17):** el producto es estilo ciclomotor (asiento corrido, canasto,
+> espejos) PERO las publicaciones reales de ML se titulan **"bicicleta eléctrica"** (KELAN Go/City/Max)
+> y la marca es KELAN E-BIKES → el SEO/copy va keyed a **bicicleta eléctrica / bici eléctrica / e-bike**
+> para hablar igual que ML. (Antes este doc decía "scooters, nunca bicicleta eléctrica"; se revirtió
+> con confirmación del usuario.)
 
 ## Decisiones cerradas
 
-- **Producto:** scooters/ciclomotores eléctricos.
+- **Producto:** bicicletas eléctricas urbanas (3 modelos: Go/City/Max). **Sin precio** en el sitio.
 - **Tipografía ROUNDO:** aún sin archivos `.woff2` → se arranca con fallback **Poppins** y se hace el
   swap cuando estén disponibles (sin tocar componentes).
 - **Datos:** **placeholder** por ahora (`data/bicicletas.json` con 3-4 modelos de ejemplo + imágenes
@@ -51,8 +51,9 @@ fotos (a futuro).
 ## SEO
 
 - Metadata dinámica con la Metadata API de Next.js, keywords long-tail geolocalizadas para Argentina
-  (scooter/moto/ciclomotor eléctrico).
-- JSON-LD `Product` con `offers` apuntando a Mercado Libre; `Organization` + `BreadcrumbList`.
+  (bicicleta eléctrica / bici eléctrica / e-bike urbana).
+- JSON-LD `Product` con `offers` apuntando a Mercado Libre (**sin `price`** — no se muestra precio);
+  `Organization` + `BreadcrumbList`.
 - `next/image` (webp/avif) con `alt` descriptivo en todo.
 - `sitemap.ts` + `robots.ts` generados desde el JSON.
 - Links a Mercado Libre con `target="_blank" rel="nofollow noopener noreferrer"`.
@@ -65,11 +66,12 @@ manualmente (Squoosh/TinyJPG) antes de subirlas a `public/images/bicis/`.
 
 ## Catálogo (estructura real)
 
-Por ahora KELAN ofrece **un único modelo de scooter en 4 colores**: Negra, Azul, Blanca y Roja.
-Cada color se muestra como un **bloque/card separado** (no un carrusel que cambia la imagen). El modelo
-de datos usa el campo `color` (no categorías). Cuando haya más modelos, se suma un campo `modelo` sin
-romper la estructura. Specs, precio, nombre comercial y links de Mercado Libre siguen siendo placeholder
-(las fotos ya son reales).
+KELAN ofrece **3 modelos**: **Go** (350W, 48V 12Ah, 4 colores), **City** (500W, 48V 20Ah, 2 colores) y
+**Max** (500W, 48V 20Ah, freno disco delantero, 1 color). Cada modelo se muestra como una card; en el
+detalle hay un **selector de color** (swatches) que cambia la galería y el link de ML. El modelo de
+datos usa `variantes[]` por modelo (cada variante: `color`, `imagenes`, `mercadoLibreUrl` para
+**deep-link por color**). Specs y links de ML son **reales**; no se muestra precio. Pendiente: foto
+real de City roja (usa la blanca como placeholder).
 
 ## Assets de marca
 

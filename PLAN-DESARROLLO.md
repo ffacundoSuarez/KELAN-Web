@@ -16,9 +16,13 @@ futuro).
 identidad de marca (dark-mode, verde lima eléctrico), desplegado en Vercel con CI desde GitHub.
 
 ### Decisiones cerradas con el cliente
-- **Producto:** scooters/ciclomotores eléctricos. SEO keyed a *moto eléctrica / scooter eléctrico /
-  ciclomotor eléctrico*, **no** "bicicleta eléctrica". Las categorías "Urbanas/MTB/Plegables" del
-  plan original **se descartan** (eran de bici de pedaleo).
+- **Producto:** **bicicletas eléctricas urbanas** (3 modelos: Go/City/Max). SEO keyed a *bicicleta
+  eléctrica / bici eléctrica / e-bike*. **REVERSIÓN (sesión 3):** el plan original decía "scooters,
+  nunca bicicleta eléctrica"; pero las publicaciones reales de ML se titulan "bicicleta eléctrica" y
+  la marca es KELAN E-BIKES → el sitio habla igual que ML. Son estilo ciclomotor (asiento corrido,
+  canasto) vendidos como bici eléctrica: seguir el término de venta, sin inventar pedaleo asistido.
+- **Catálogo:** 3 modelos, cada uno con `variantes[]` de color (Go 4, City 2, Max 1). Deep-link por
+  color a ML. **Sin precio** en el sitio (se ve en ML).
 - **Tipografía ROUNDO:** todavía sin archivos `.woff2`. Se arranca con **fallback** rounded-geométrico
   (Poppins vía `next/font/google`) y se deja el sistema preparado para hacer el swap a ROUNDO local
   cambiando un solo archivo, sin tocar componentes.
@@ -134,10 +138,11 @@ CLAUDE.md                 # doc del repo para Claude
 
 1. **Metadata API por ruta.** `metadata` estático en layout/landing y `generateMetadata` dinámico en
    `[slug]` (title, description, OpenGraph, Twitter, canonical). Plantilla `%s · KELAN E-Bikes`.
-2. **Keywords long-tail geolocalizadas (AR):** "scooter eléctrico Argentina", "moto eléctrica urbana",
-   "ciclomotor eléctrico precio", "[modelo] autonomía batería", etc. — NO "bicicleta eléctrica".
-3. **Structured Data (JSON-LD):** `Product` por modelo con `offers` (precio, ARS, availability, url →
-   ML) y `brand`; `Organization`/`WebSite` en el layout; `BreadcrumbList` en el detalle.
+2. **Keywords long-tail geolocalizadas (AR):** "bicicleta eléctrica Argentina", "bici eléctrica
+   urbana", "e-bike [modelo]", "[modelo] autonomía batería", etc. (keyed a *bicicleta eléctrica*).
+3. **Structured Data (JSON-LD):** `Product` por modelo con `offers` (**sin `price`** — no se muestra
+   precio; solo `availability` + `url` → ML) y `brand`; `Organization`/`WebSite` en el layout;
+   `BreadcrumbList` en el detalle.
 4. **`app/sitemap.ts` y `app/robots.ts`** generados desde el JSON.
 5. **`next/image`** → `.webp`/`.avif`, `sizes` por dispositivo, `priority` en hero, lazy en el resto.
    `alt` descriptivo en todas.

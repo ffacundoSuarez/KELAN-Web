@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <Logo variant="full" className="h-12 w-auto" />
           <p className="mt-4 max-w-xs font-texto text-sm text-kelan-gris/60">
-            Movilidad eléctrica urbana. Scooters y ciclomotores eléctricos en Argentina.
+            Movilidad eléctrica urbana. Bicicletas eléctricas KELAN en Argentina.
           </p>
         </div>
 
@@ -31,6 +31,15 @@ export default function Footer() {
           </ul>
         </nav>
 
+        <div>
+          <h2 className="font-titulos text-sm font-semibold text-kelan-gris">Showroom</h2>
+          <address className="mt-4 font-texto text-sm not-italic text-kelan-gris/60">
+            {siteConfig.direccion.calle}, {siteConfig.direccion.barrio}
+            <br />
+            {siteConfig.direccion.ciudad}
+          </address>
+        </div>
+
         <nav aria-label="Legales">
           <h2 className="font-titulos text-sm font-semibold text-kelan-gris">Legales</h2>
           <ul className="mt-4 space-y-2 font-texto text-sm text-kelan-gris/60">
@@ -46,21 +55,6 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-
-        <div>
-          <h2 className="font-titulos text-sm font-semibold text-kelan-gris">Información</h2>
-          <a
-            href={siteConfig.dataFiscalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block"
-          >
-            {/* Data Fiscal AFIP — reemplazar por la imagen oficial provista por la clienta. */}
-            <span className="inline-block rounded border border-white/20 px-3 py-2 font-texto text-xs text-kelan-gris/60">
-              Data Fiscal (AFIP)
-            </span>
-          </a>
-        </div>
       </div>
 
       <div className="border-t border-white/10">

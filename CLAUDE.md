@@ -5,11 +5,14 @@ Guía para Claude Code al trabajar en este repo. Leer antes de empezar cualquier
 ## Qué es este proyecto
 
 Web **vitrina** (catálogo digital, sin carrito ni pagos) para **KELAN**, marca argentina de
-**scooters / ciclomotores eléctricos**. Muestra los modelos con specs y fotos y redirige a la cuenta
-de **Mercado Libre** de la clienta (Pili) para cerrar la venta.
+**bicicletas eléctricas urbanas**. Muestra los modelos con specs y fotos y redirige a la tienda de
+**Mercado Libre** de la clienta (Pili, tienda "Chuwi") para cerrar la venta.
 
-> ⚠️ El producto son **scooters/ciclomotores eléctricos**, NO bicicletas de pedaleo. El SEO va keyed a
-> "moto eléctrica / scooter eléctrico / ciclomotor eléctrico", nunca "bicicleta eléctrica".
+> ⚠️ Terminología/SEO keyed a **"bicicleta eléctrica / e-bike"** — así se titulan las publicaciones
+> reales de ML (KELAN Go/City/Max, 48V, 350-500W). Son estilo ciclomotor (asiento corrido, canasto,
+> espejos) pero se **venden como "bicicleta eléctrica"**: seguir ese término de venta, sin inventar
+> pedaleo asistido. (Revierte una regla previa que decía "nunca bicicleta eléctrica" — ver
+> `PLAN-DESARROLLO.md`.) **No** mostrar precio en el sitio (se ve en ML).
 
 Documentos de referencia:
 - [`PLAN-PAGINA.md`](./PLAN-PAGINA.md) — contexto general (`.md` padre).
@@ -46,9 +49,10 @@ Documentos de referencia:
 
 - **Idioma de UI:** español (Argentina), `lang="es-AR"`. Nombres de tipos/variables del dominio en
   español (`Bicicleta`, `getBicicletaBySlug`) por consistencia con el JSON.
-- **Catálogo:** un único modelo de scooter en 4 colores (negra/azul/blanca/roja). Cada color es una
-  entrada propia en `data/bicicletas.json` con campo `color` (ver `colores` en `lib/bicicletas.ts`).
-  Specs/precio/nombre/ML son placeholder; las fotos son reales.
+- **Catálogo:** 3 modelos de bici eléctrica — **Go** (4 colores), **City** (2), **Max** (1). Cada
+  modelo es una entrada en `data/bicicletas.json` con `variantes[]`; cada variante tiene su `color`,
+  sus `imagenes` y su `mercadoLibreUrl` (deep-link por color: cada color abre su publicación en ML).
+  Ver `colores` (swatches) en `lib/bicicletas.ts`. Specs reales de ML; **sin precio**.
 - **Datos:** todo sale de `data/bicicletas.json` vía los getters de `lib/bicicletas.ts`. No hardcodear
   modelos en componentes.
 - **Assets de marca:** logos oficiales en `public/brand/` (wordmark, logo-color/dark/light, isotipo-

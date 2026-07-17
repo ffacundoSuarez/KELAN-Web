@@ -1,17 +1,20 @@
 import type { Specs } from "@/lib/bicicletas";
 
-/** Tabla de especificaciones técnicas (texto real, indexable por crawlers). */
+/** Tabla de especificaciones técnicas (texto real, indexable por crawlers).
+ *  Solo renderiza las filas cuyo dato existe (varias specs son opcionales). */
 export default function SpecsTable({ specs }: { specs: Specs }) {
   const filas: { label: string; valor: string }[] = [
     { label: "Motor", valor: specs.motor },
     { label: "Batería", valor: specs.bateria },
-    { label: "Autonomía", valor: `${specs.autonomiaKm} km` },
     { label: "Velocidad máxima", valor: `${specs.velocidadMaxKmh} km/h` },
-    { label: "Tiempo de carga", valor: `${specs.tiempoCargaHoras} h` },
-    { label: "Frenos", valor: specs.freno },
     { label: "Rodado", valor: specs.rodado },
     { label: "Peso", valor: `${specs.pesoKg} kg` },
-    { label: "Carga máxima", valor: `${specs.cargaMaxKg} kg` },
+    ...(specs.autonomiaKm ? [{ label: "Autonomía", valor: `${specs.autonomiaKm} km` }] : []),
+    ...(specs.tiempoCargaHoras
+      ? [{ label: "Tiempo de carga", valor: `${specs.tiempoCargaHoras} h` }]
+      : []),
+    ...(specs.freno ? [{ label: "Frenos", valor: specs.freno }] : []),
+    ...(specs.cargaMaxKg ? [{ label: "Carga máxima", valor: `${specs.cargaMaxKg} kg` }] : []),
   ];
 
   return (

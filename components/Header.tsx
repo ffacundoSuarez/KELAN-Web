@@ -37,7 +37,7 @@ export default function Header() {
         {/* Botón hamburguesa mobile */}
         <button
           type="button"
-          className="md:hidden"
+          className="-m-3 flex flex-col items-center justify-center p-3 text-kelan-gris transition-opacity active:opacity-60 md:hidden"
           aria-expanded={abierto}
           aria-controls="menu-mobile"
           aria-label={abierto ? "Cerrar menú" : "Abrir menú"}

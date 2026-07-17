@@ -3,13 +3,13 @@
  * Todos los componentes/páginas consumen los modelos a través de estos getters
  * (nunca importan el JSON directo) para poder cambiar la fuente sin tocar la UI.
  *
- * Estado actual: KELAN ofrece un único modelo de scooter en 4 colores. Cada color
- * es una entrada propia ("bloque distinto"). Cuando haya más modelos, se puede
- * sumar un campo `modelo`/`categoria` sin romper este contrato.
+ * Estado actual: KELAN ofrece 3 modelos de bicicleta eléctrica urbana (Go, City, Max).
+ * Cada modelo viene en 1..N colores; cada color es una `Variante` con sus propias
+ * imágenes y su propio link de Mercado Libre (deep-link por color).
  */
 import bicicletasData from "@/data/bicicletas.json";
 
-/** Colores disponibles del modelo. */
+/** Colores disponibles. */
 export type ColorSlug = "negra" | "azul" | "blanca" | "roja";
 
 /** Label + muestra (swatch) por color. */
@@ -20,16 +20,21 @@ export const colores: Record<ColorSlug, { label: string; hex: string }> = {
   roja: { label: "Roja", hex: "#e8431f" },
 };
 
+/**
+ * Specs técnicas. `motor`, `bateria`, `velocidadMaxKmh`, `rodado` y `pesoKg` son
+ * requeridas; el resto es opcional porque no todas las publicaciones las informan
+ * (ej. la autonomía y el tiempo de carga no figuran; el freno solo en algunos modelos).
+ */
 export interface Specs {
   motor: string;
   bateria: string;
-  autonomiaKm: number;
   velocidadMaxKmh: number;
-  tiempoCargaHoras: number;
-  freno: string;
   rodado: string;
   pesoKg: number;
-  cargaMaxKg: number;
+  autonomiaKm?: number;
+  tiempoCargaHoras?: number;
+  freno?: string;
+  cargaMaxKg?: number;
 }
 
 export interface Imagen {
@@ -37,17 +42,22 @@ export interface Imagen {
   alt: string;
 }
 
+/** Un color del modelo: sus imágenes y su link de ML puntual. */
+export interface Variante {
+  color: ColorSlug;
+  imagenes: Imagen[];
+  mercadoLibreUrl: string;
+}
+
 export interface Bicicleta {
   slug: string;
   nombre: string;
-  color: ColorSlug;
-  precio: number;
-  moneda: string;
   destacado: boolean;
   descripcionCorta: string;
   descripcionLarga: string;
   specs: Specs;
-  imagenes: Imagen[];
+  variantes: Variante[];
+  /** Link de la tienda/modelo en ML (fallback general). */
   mercadoLibreUrl: string;
 }
 
@@ -61,13 +71,4 @@ export function getAllBicicletas(): Bicicleta[] {
 /** Un modelo por su slug (o undefined si no existe). */
 export function getBicicletaBySlug(slug: string): Bicicleta | undefined {
   return bicicletas.find((b) => b.slug === slug);
-}
-
-/** Formatea un precio en pesos argentinos. */
-export function formatearPrecio(precio: number, moneda = "ARS"): string {
-  return new Intl.NumberFormat("es-AR", {
-    style: "currency",
-    currency: moneda,
-    maximumFractionDigits: 0,
-  }).format(precio);
 }

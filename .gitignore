@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Carpeta de PDF y mas cosas
 /borrador
+
+# Guia interna de deploy (no versionar)
+/DEPLOY.md
