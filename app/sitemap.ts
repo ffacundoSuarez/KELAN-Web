@@ -5,10 +5,10 @@ import { urlAbsoluta } from "@/lib/seo";
 export default function sitemap(): MetadataRoute.Sitemap {
   const ahora = new Date();
 
+  // Solo páginas indexables: /terminos y /privacidad declaran robots noindex,
+  // incluirlas acá sería una señal contradictoria para Google.
   const estaticas: MetadataRoute.Sitemap = [
     { url: urlAbsoluta("/"), lastModified: ahora, changeFrequency: "weekly", priority: 1 },
-    { url: urlAbsoluta("/terminos"), lastModified: ahora, changeFrequency: "yearly", priority: 0.3 },
-    { url: urlAbsoluta("/privacidad"), lastModified: ahora, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const productos: MetadataRoute.Sitemap = getAllBicicletas().map((b) => ({

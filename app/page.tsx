@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import AboutSection from "@/components/AboutSection";
 import { getAllBicicletas } from "@/lib/bicicletas";
+
+// Título y descripción se heredan del layout; acá solo el canonical propio.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   const bicicletas = getAllBicicletas();

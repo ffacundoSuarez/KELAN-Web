@@ -27,7 +27,8 @@ export const metadata: Metadata = {
     title: siteConfig.nombre,
     description: siteConfig.descripcion,
   },
-  alternates: { canonical: "/" },
+  // Sin `alternates.canonical` acá: las páginas hijas lo heredan y terminarían
+  // apuntando todas al home. Cada página declara el suyo.
 };
 
 const organizationLd = {
