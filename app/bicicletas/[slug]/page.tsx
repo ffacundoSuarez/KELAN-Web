@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllBicicletas, getBicicletaBySlug, colores } from "@/lib/bicicletas";
+import { getAllBicicletas, getBicicletaBySlug } from "@/lib/bicicletas";
 import { siteConfig, urlAbsoluta } from "@/lib/seo";
 import SelectorColorGaleria from "@/components/SelectorColorGaleria";
 import SpecsTable from "@/components/SpecsTable";
@@ -56,22 +56,14 @@ export default async function BicicletaPage({
   const bici = getBicicletaBySlug(slug);
   if (!bici) notFound();
 
-  const productLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: bici.nombre,
-    description: bici.descripcionLarga,
-    image: bici.variantes.flatMap((v) => v.imagenes.map((img) => urlAbsoluta(img.src))),
-    brand: { "@type": "Brand", name: "KELAN" },
-    color: bici.variantes.map((v) => colores[v.color].label),
-    category: "Bicicleta eléctrica",
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      url: bici.mercadoLibreUrl,
-    },
-  };
-
+  /**
+   * Sin JSON-LD `Product` a propósito: la venta se cierra en Mercado Libre, no acá.
+   * Un `Product` obliga a declarar `offers.price` y, como no mostramos precio en el
+   * sitio (y Google prohíbe declarar datos que no estén visibles en la página), la
+   * página nunca calificaría para rich results de producto. Marcarla como producto
+   * solo generaba errores en Search Console. Si algún día hay precio visible y
+   * reseñas reales en el sitio, se puede reintroducir con `offers` completo.
+   */
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -88,7 +80,6 @@ export default async function BicicletaPage({
 
   return (
     <article className="mx-auto max-w-6xl px-5 py-12">
-      <JsonLd data={productLd} />
       <JsonLd data={breadcrumbLd} />
 
       {/* Botón volver a la grilla de modelos */}
