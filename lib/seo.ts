@@ -16,6 +16,9 @@ export const siteConfig = {
   // Redes / contacto.
   whatsapp: "https://wa.me/5491140961044",
   instagram: "https://www.instagram.com/kelan_ebikes/",
+  // Versiones legibles para mostrar en pantalla (los de arriba son URLs).
+  whatsappDisplay: "+54 9 11 4096-1044",
+  instagramUsuario: "@kelan_ebikes",
   // Local físico (showroom). NAP consistente para SEO local.
   telefono: "+541140961044",
   direccion: {

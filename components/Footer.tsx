@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import { WhatsAppIcon, InstagramIcon } from "./SocialIcons";
 import { siteConfig } from "@/lib/seo";
 
 export default function Footer() {
@@ -19,13 +20,25 @@ export default function Footer() {
           <h2 className="font-titulos text-sm font-semibold text-kelan-gris">Contacto</h2>
           <ul className="mt-4 space-y-2 font-texto text-sm text-kelan-gris/60">
             <li>
-              <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-kelan-lima">
-                WhatsApp
+              <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-kelan-lima"
+              >
+                <WhatsAppIcon className="h-4 w-4 shrink-0" />
+                {siteConfig.whatsappDisplay}
               </a>
             </li>
             <li>
-              <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-kelan-lima">
-                Instagram
+              <a
+                href={siteConfig.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-kelan-lima"
+              >
+                <InstagramIcon className="h-4 w-4 shrink-0" />
+                {siteConfig.instagramUsuario}
               </a>
             </li>
           </ul>
